@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using DevExpress.Maui;
+using CommunityToolkit.Maui;
 
 namespace MWorkDaily
 {
@@ -9,6 +10,7 @@ namespace MWorkDaily
         {
             var builder = MauiApp.CreateBuilder();
             builder
+                .UseMauiCommunityToolkit()
                 .UseMauiApp<App>()
                 .UseDevExpress()
                 .ConfigureFonts(fonts =>

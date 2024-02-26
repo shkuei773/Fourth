@@ -1,13 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="MWorkDaily.MainPage"
+    x:Class="MWorkDaily.View.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
     xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
     xmlns:local="clr-namespace:MWorkDaily.ViewModel">
     <ContentPage.BindingContext>
         <local:MainViewModel />
     </ContentPage.BindingContext>
-    <dxg:DataGridView />
+
+    <dx:DXStackLayout>
+
+
+        <dx:DXButton
+            Command="{Binding logOutCommand}"
+            Content="로그아웃"
+            VerticalOptions="End" />
+    </dx:DXStackLayout>
 
 </ContentPage>
